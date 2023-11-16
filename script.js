@@ -204,14 +204,35 @@
 
 // console.log(cat);
 
+// ---FOR LOOP--- calculating squares
+// const results = document.querySelector("#results");
+
+// function calculate() {
+//   for (let i = 0; i < 10; i++) {
+//     const newResult = `${i} x ${i} = ${i * i}`;
+//     results.textContent += `${newResult}\n`;
+//   }
+//   results.textContent += "\nFinished!";
+// }
+
+// const calculateBtn = document.querySelector("#calculate");
+// const clrBtn = document.querySelector("#clear");
+
+// calculateBtn.addEventListener("click", calculate);
+// clrBtn.addEventListener("click", () => (results.textContent = ""));
+
 const results = document.querySelector("#results");
 
 function calculate() {
-  for (let i = 0; i < 10; i++) {
-    const newResult = `${i} x ${i} = ${i * i}`;
-    results.textContent += `${newResult}\n`;
+  const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+  results.textContent = "My cats are called ";
+  for (let i = 0; i < cats.length; i++) {
+    if (i === cats.length - 1) {
+      results.textContent += `and ${cats[i]}.`;
+    } else {
+      results.textContent += `${cats[i]}, `;
+    }
   }
-  results.textContent += "\nFinished!";
 }
 
 const calculateBtn = document.querySelector("#calculate");
