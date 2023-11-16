@@ -221,6 +221,7 @@
 // calculateBtn.addEventListener("click", calculate);
 // clrBtn.addEventListener("click", () => (results.textContent = ""));
 
+// ---FOR LOOP--- proper punctuation and calculating the end of array
 const results = document.querySelector("#results");
 
 function calculate() {
