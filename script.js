@@ -244,33 +244,50 @@
 
 // Finding phone number by contact name
 // Exit for loop with break statement
-const contacts = [
-  "Chris:2232322",
-  "Sarah:3453456",
-  "Bill:7654322",
-  "Mary:9998769",
-  "Dianne:9384975",
-];
+// const contacts = [
+//   "Chris:2232322",
+//   "Sarah:3453456",
+//   "Bill:7654322",
+//   "Mary:9998769",
+//   "Dianne:9384975",
+// ];
 
+// const para = document.querySelector("p");
+// const input = document.querySelector("input");
+// const btn = document.querySelector("button");
+
+// btn.addEventListener("click", () => {
+//   const searchName = input.value.toLowerCase();
+//   input.value = "";
+//   input.focus();
+//   para.textContent = "";
+//   for (const contact of contacts) {
+//     const findContact = contact.split(":");
+//     if (findContact[0].toLowerCase() === searchName) {
+//       para.textContent = `${findContact[0]}'s contact number is ${findContact[1]}`;
+//       break;
+//     }
+//   }
+//   if (para.textContent === "") {
+//     para.textContent = "Contact not found";
+//   }
+// });
+
+// Finding squares of integers using continue statement
 const para = document.querySelector("p");
 const input = document.querySelector("input");
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
-  const searchName = input.value.toLowerCase();
+  para.textContent = "Output: ";
+  const num = input.value;
   input.value = "";
   input.focus();
-  para.textContent = "";
-  for (const contact of contacts) {
-    const findContact = contact.split(":");
-    if (findContact[0].toLowerCase() === searchName) {
-      para.textContent = `${findContact[0]}'s contact number is ${findContact[1]}`;
+  for (let i = 1; i <= num; i++) {
+    let sqRoot = Math.sqrt(i);
+    if (Math.floor(sqRoot) !== sqRoot) {
       break;
     }
-  }
-  if (para.textContent === "") {
-    para.textContent = "Contact not found";
+    para.textContent += `${i} `;
   }
 });
-
-//
