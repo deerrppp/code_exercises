@@ -222,22 +222,54 @@
 // clrBtn.addEventListener("click", () => (results.textContent = ""));
 
 // ---FOR LOOP--- proper punctuation and calculating the end of array
-const results = document.querySelector("#results");
+// const results = document.querySelector("#results");
 
-function calculate() {
-  const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
-  results.textContent = "My cats are called ";
-  for (let i = 0; i < cats.length; i++) {
-    if (i === cats.length - 1) {
-      results.textContent += `and ${cats[i]}.`;
+// function calculate() {
+//   const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+//   results.textContent = "My cats are called ";
+//   for (let i = 0; i < cats.length; i++) {
+//     if (i === cats.length - 1) {
+//       results.textContent += `and ${cats[i]}.`;
+//     } else {
+//       results.textContent += `${cats[i]}, `;
+//     }
+//   }
+// }
+
+// const calculateBtn = document.querySelector("#calculate");
+// const clrBtn = document.querySelector("#clear");
+
+// calculateBtn.addEventListener("click", calculate);
+// clrBtn.addEventListener("click", () => (results.textContent = ""));
+
+// Finding phone number by contact name
+// Exit for loop with break statement
+const contacts = [
+  "Chris:2232322",
+  "Sarah:3453456",
+  "Bill:7654322",
+  "Mary:9998769",
+  "Dianne:9384975",
+];
+
+const para = document.querySelector("p");
+const input = document.querySelector("input");
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", () => {
+  const searchName = input.value.toLowerCase();
+  input.textContent = "";
+  input.focus();
+  para.textContent = "";
+  for (const contact of contacts) {
+    const findContact = contact.split(":");
+    if (findContact[0].toLowerCase() === searchName) {
+      para.textContent = `${findContact[0]}'s contact number is ${findContact[1]}`;
+      break;
     } else {
-      results.textContent += `${cats[i]}, `;
+      para.textContent = "Contact not found.";
     }
   }
-}
+});
 
-const calculateBtn = document.querySelector("#calculate");
-const clrBtn = document.querySelector("#clear");
-
-calculateBtn.addEventListener("click", calculate);
-clrBtn.addEventListener("click", () => (results.textContent = ""));
+//
