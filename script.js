@@ -258,7 +258,7 @@ const btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
   const searchName = input.value.toLowerCase();
-  input.textContent = "";
+  input.value = "";
   input.focus();
   para.textContent = "";
   for (const contact of contacts) {
@@ -266,9 +266,10 @@ btn.addEventListener("click", () => {
     if (findContact[0].toLowerCase() === searchName) {
       para.textContent = `${findContact[0]}'s contact number is ${findContact[1]}`;
       break;
-    } else {
-      para.textContent = "Contact not found.";
     }
+  }
+  if (para.textContent === "") {
+    para.textContent = "Contact not found";
   }
 });
 
