@@ -286,7 +286,7 @@ btn.addEventListener("click", () => {
   for (let i = 1; i <= num; i++) {
     let sqRoot = Math.sqrt(i);
     if (Math.floor(sqRoot) !== sqRoot) {
-      break;
+      continue;
     }
     para.textContent += `${i} `;
   }
