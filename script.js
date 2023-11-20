@@ -274,20 +274,60 @@
 // });
 
 // Finding squares of integers using continue statement
-const para = document.querySelector("p");
-const input = document.querySelector("input");
-const btn = document.querySelector("button");
+// const para = document.querySelector("p");
+// const input = document.querySelector("input");
+// const btn = document.querySelector("button");
 
-btn.addEventListener("click", () => {
-  para.textContent = "Output: ";
-  const num = input.value;
-  input.value = "";
-  input.focus();
-  for (let i = 1; i <= num; i++) {
-    let sqRoot = Math.sqrt(i);
-    if (Math.floor(sqRoot) !== sqRoot) {
-      continue;
-    }
-    para.textContent += `${i} `;
+// btn.addEventListener("click", () => {
+//   para.textContent = "Output: ";
+//   const num = input.value;
+//   input.value = "";
+//   input.focus();
+//   for (let i = 1; i <= num; i++) {
+//     let sqRoot = Math.sqrt(i);
+//     if (Math.floor(sqRoot) !== sqRoot) {
+//       continue;
+//     }
+//     para.textContent += `${i} `;
+//   }
+// });
+
+//
+
+// let output = document.querySelector(".output");
+// output.innerHTML = "";
+
+// let i = 10;
+
+// while (i >= 0) {
+//   const para = document.createElement("p");
+//   if (i === 0) {
+//     para.textContent = `Blast Off!`;
+//   } else if (i === 10) {
+//     para.textContent = `Countdown ${i}`;
+//   } else {
+//     para.textContent = `${i}`;
+//   }
+//   output.appendChild(para);
+//   i--;
+// }
+
+const output = document.querySelector(".output");
+output.innerHTML = "";
+
+let i = 10;
+
+while (i >= 0) {
+  const para = document.createElement("p");
+  if (i === 10) {
+    para.textContent = `Countdown ${i}`;
+  } else if (i === 0) {
+    para.textContent = "Blast off!";
+  } else {
+    para.textContent = i;
   }
-});
+
+  output.appendChild(para);
+
+  i--;
+}

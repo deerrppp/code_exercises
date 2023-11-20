@@ -1,19 +1,19 @@
 html {
-  width: 100%;
-  height: inherit;
-  background: #ddd;
+  font-family: sans-serif;
 }
 
-canvas {
-  display: block;
+h2 {
+  font-size: 16px;
+}
+
+.a11y-label {
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
 }
 
 body {
-  margin: 0;
-}
-
-button {
-  position: absolute;
-  top: 5px;
-  left: 5px;
+  margin: 10px;
+  background: #f5f9fa;
 }
