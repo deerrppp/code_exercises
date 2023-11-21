@@ -312,22 +312,53 @@
 //   i--;
 // }
 
-const output = document.querySelector(".output");
-output.innerHTML = "";
+// DOM, COUNTDOWN TO 0
+// const output = document.querySelector(".output");
+// output.innerHTML = "";
 
-let i = 10;
+// let i = 10;
 
-while (i >= 0) {
-  const para = document.createElement("p");
-  if (i === 10) {
-    para.textContent = `Countdown ${i}`;
-  } else if (i === 0) {
-    para.textContent = "Blast off!";
+// while (i >= 0) {
+//   const para = document.createElement("p");
+//   if (i === 10) {
+//     para.textContent = `Countdown ${i}`;
+//   } else if (i === 0) {
+//     para.textContent = "Blast off!";
+//   } else {
+//     para.textContent = i;
+//   }
+
+//   output.appendChild(para);
+
+//   i--;
+// }
+
+// FILLING Guest List
+const people = [
+  "Chris",
+  "Anne",
+  "Colin",
+  "Terri",
+  "Phil",
+  "Lola",
+  "Sam",
+  "Kay",
+  "Bruce",
+];
+
+const admitted = document.querySelector(".admitted");
+const refused = document.querySelector(".refused");
+admitted.textContent = "Admit: ";
+refused.textContent = "Refuse: ";
+
+for (const person of people) {
+  if (person === "Phil" || person === "Lola") {
+    refused.textContent += `${person}, `;
   } else {
-    para.textContent = i;
+    admitted.textContent += `${person}, `;
   }
-
-  output.appendChild(para);
-
-  i--;
 }
+refused.textContent =
+  refused.textContent.slice(0, refused.textContent.length - 2) + ".";
+admitted.textContent =
+  admitted.textContent.slice(0, admitted.textContent.length - 2) + ".";
