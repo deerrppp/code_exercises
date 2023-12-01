@@ -333,32 +333,27 @@
 //   i--;
 // }
 
-// FILLING Guest List
-const people = [
-  "Chris",
-  "Anne",
-  "Colin",
-  "Terri",
-  "Phil",
-  "Lola",
-  "Sam",
-  "Kay",
-  "Bruce",
-];
+//---DO While
+// let num;
 
-const admitted = document.querySelector(".admitted");
-const refused = document.querySelector(".refused");
-admitted.textContent = "Admit: ";
-refused.textContent = "Refuse: ";
+// do {
+//   num = prompt("Enter a number greater than 100", 0);
+// } while (num <= 100 && num);
 
-for (const person of people) {
-  if (person === "Phil" || person === "Lola") {
-    refused.textContent += `${person}, `;
-  } else {
-    admitted.textContent += `${person}, `;
-  }
-}
-refused.textContent =
-  refused.textContent.slice(0, refused.textContent.length - 2) + ".";
-admitted.textContent =
-  admitted.textContent.slice(0, admitted.textContent.length - 2) + ".";
+//js-exercise odin
+//mag iinput ng hey tapos nakalagay kung ilan. pag negative number nilagay mag eerror
+// const repeatString = function (word, num) {
+//   if (num < 0) return "ERROR";
+//   string = "";
+//   for (i = 0; i < num; i++) {
+//     string += word;
+//   }
+//   return string;
+// };
+
+// repeatString();
+
+//reverse string
+const reverseString = function (string) {
+  return string.split("").reverse().join("");
+};
