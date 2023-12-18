@@ -354,6 +354,43 @@
 // repeatString();
 
 //reverse string
-const reverseString = function (string) {
-  return string.split("").reverse().join("");
+// const reverseString = function (string) {
+//   return string.split("").reverse().join("");
+// };
+
+//rest arguments
+// function sum(...numbers) {
+//   let result = 0;
+//   for (let number of numbers) {
+//     result += number;
+//   }
+//   return result;
+// }
+
+// const total = sum(1, 2, 3, 4);
+// console.log(`The total is ${total}`);
+
+// function removeFromArray(array, ...removedNumber) {
+//   return array.filter((num) => removedNumber.includes(num));
+// }
+
+// const remover = removeFromArray([1, 2, 3, 4, 5, 6], 2, 3, 4);
+// console.log(remover);
+
+// let reverseString = (string) => string.split("").reverse().join("");
+// console.log(reverseString("aaba"));
+
+//SUM OF ALL NUMBERS
+const sumAll = function (num1, num2) {
+  if (num1 < 0 || num2 < 0) return "ERROR";
+  // if (typeof num1 !== "number" || typeof num2 !== "number") return "ERROR";
+  if (!Number.isInteger(num1) || !Number.isInteger(num2)) return "ERROR";
+  if (num1 > num2) [num1, num2] = [num2, num1];
+  let total = 0;
+  for (let i = num1; i <= num2; i++) {
+    total += i;
+  }
+  return total;
 };
+let addition = sumAll(7, 3);
+console.log(addition);
