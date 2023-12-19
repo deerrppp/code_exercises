@@ -402,8 +402,29 @@
 //However, years divisible by 100 are not leap years (such as 1800 and 1900)
 //unless they are divisible by 400 (like 1600 and 2000, which were in fact leap years).
 //(Yes, it's all pretty confusing)
-const leapYears = function (num) {
-  return num % 4 === 0 && (num % 100 !== 0 || num % 400 === 0);
+// const leapYears = function (num) {
+//   return num % 4 === 0 && (num % 100 !== 0 || num % 400 === 0);
+// };
+// let test = leapYears(1800);
+// console.log(test);
+
+//CONVERT CELSIUS to FAHRENHEIT & vice-versa
+//answer should be rounded to one decimal place: i.e., `convertToCelsius(100)` should return `37.8` and not `37.77777777777778`.
+// Write two functions that convert temperatures from Fahrenheit to Celsius, and vice versa:
+// ```
+// convertToCelsius(32) // fahrenheit to celsius, should return 0
+
+// convertToFahrenheit(0) // celsius to fahrenheit, should return 32
+const convertToCelsius = function (fahrenheit) {
+  return Math.round((fahrenheit - 32) * (5 / 9) * 10) / 10;
 };
-let test = leapYears(1800);
-console.log(test);
+
+const convertToFahrenheit = function (celsius) {
+  return Math.round(((celsius * 9) / 5 + 32) * 10) / 10;
+};
+console.log(convertToCelsius(32)); //0
+console.log(convertToCelsius(100)); //1 decimal
+console.log(convertToCelsius(-100)); //negative 1 decimal
+console.log(convertToFahrenheit(0));
+console.log(convertToFahrenheit(73.2));
+console.log(convertToFahrenheit(-10));
