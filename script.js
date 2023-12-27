@@ -415,16 +415,85 @@
 // convertToCelsius(32) // fahrenheit to celsius, should return 0
 
 // convertToFahrenheit(0) // celsius to fahrenheit, should return 32
-const convertToCelsius = function (fahrenheit) {
-  return Math.round((fahrenheit - 32) * (5 / 9) * 10) / 10;
-};
+// const convertToCelsius = function (fahrenheit) {
+//   return Math.round((fahrenheit - 32) * (5 / 9) * 10) / 10;
+// };
 
-const convertToFahrenheit = function (celsius) {
-  return Math.round(((celsius * 9) / 5 + 32) * 10) / 10;
-};
-console.log(convertToCelsius(32)); //0
-console.log(convertToCelsius(100)); //1 decimal
-console.log(convertToCelsius(-100)); //negative 1 decimal
-console.log(convertToFahrenheit(0));
-console.log(convertToFahrenheit(73.2));
-console.log(convertToFahrenheit(-10));
+// const convertToFahrenheit = function (celsius) {
+//   return Math.round(((celsius * 9) / 5 + 32) * 10) / 10;
+// };
+// console.log(convertToCelsius(32)); //0
+// console.log(convertToCelsius(100)); //1 decimal
+// console.log(convertToCelsius(-100)); //negative 1 decimal
+// console.log(convertToFahrenheit(0));
+// console.log(convertToFahrenheit(73.2));
+// console.log(convertToFahrenheit(-10));
+
+// const container = document.querySelector("#container");
+// const p = document.createElement("p");
+// p.innerText = "Hey I'm red!";
+// container.appendChild(p);
+// const h3 = document.createElement("h3");
+// h3.innerText = "I'm a blue h3!";
+// container.appendChild(h3);
+
+// const div = document.createElement("div");
+// div.classList.add("div");
+// const h1 = document.createElement("h1");
+// h1.innerText = "I'm in a div.";
+// div.appendChild(h1);
+// const p2 = document.createElement("p");
+// p2.innerText = "ME TOO!";
+// div.appendChild(p2);
+// container.appendChild(div);
+
+// function alertFunction() {
+//   alert("YAY! You did it!");
+// }
+
+// const btn = document.querySelector("#btn");
+// btn.addEventListener("click", (a) => console.log(a));
+
+//ADDING ELEMENTS AND APPENDING IT TO A PARENT NODE
+const container = document.querySelector("#container");
+const red = document.createElement("p");
+red.classList.add("red");
+red.style.color = "red";
+red.textContent = "Hey I'm red";
+container.appendChild(red);
+const blue = document.createElement("h3");
+blue.classList.add("blue");
+blue.style.color = "blue";
+blue.textContent = "I'm a blue";
+container.appendChild(blue);
+const div = document.createElement("div");
+div.style.backgroundColor = "pink";
+div.style.borderStyle = "solid";
+const h1 = document.createElement("h1");
+h1.textContent = "I'm in a div";
+div.appendChild(h1);
+const p = document.createElement("p");
+p.textContent = "Me TOO!";
+div.appendChild(p);
+container.appendChild(div);
+//SETTING ATTRIBUTE TO A BUTTON
+const button1 = document.createElement("button");
+button1.setAttribute("id", "1");
+button1.textContent = "Click Me";
+const button2 = document.createElement("button");
+button2.setAttribute("id", "2");
+button2.textContent = "Click Me";
+const button3 = document.createElement("button");
+button3.setAttribute("id", "3");
+button3.textContent = "Click Me";
+container.appendChild(button1);
+container.appendChild(button2);
+container.appendChild(button3);
+
+//SETTING EACH BUTTON TO HAVE AN EVENT LISTENER AND ADDING AN ALERT
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    alert(`You clicked button ${button.id}!`);
+  });
+});
